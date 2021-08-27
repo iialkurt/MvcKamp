@@ -1,32 +1,30 @@
-﻿using DataAccesLayer.Abstract;
+﻿using DataAccessLayer.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccesLayer.Concrete.Repositories
+namespace DataAccessLayer.Concrete.Repositories
 {
-    public class GenericReposirtory<T> : IRepository<T> where T : class
+    public class GenericRepository<T> : IRepository<T> where T : class
     {
 
         Context c = new Context();
         DbSet<T> _object;
 
-        public GenericReposirtory()
+        public GenericRepository()
         {
-            _object = c.Set<T>();     
+            _object = c.Set<T>();
         }
-
-        public void delete(T p)
+        public void Delete(T p)
         {
             _object.Remove(p);
             c.SaveChanges();
         }
 
-        public void insert(T p)
+        public void Insert(T p)
         {
             _object.Add(p);
             c.SaveChanges();
@@ -37,12 +35,7 @@ namespace DataAccesLayer.Concrete.Repositories
             return _object.ToList();
         }
 
-        public List<T> List(Expression<Func<T, bool>> filter)
-        {
-            return _object.Where(filter).ToList();
-        }
-
-        public void update(T p)
+        public void Update(T p)
         {
             c.SaveChanges();
         }
