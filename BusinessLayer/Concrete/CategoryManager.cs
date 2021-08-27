@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccesLayer.Abstract
+namespace BusinessLayer.Concrete
 {
-    public interface IWriterDal : IRepository<T> 
+    public class CategoryManager
     {
     }
 }

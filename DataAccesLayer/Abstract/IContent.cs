@@ -1,5 +1,4 @@
-﻿using EntityLayer.Congrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer.Abstract
 {
-    public interface IContentDal:IRepository<Content>
+    public interface IContent : IRepository<T> 
     {
     }
 }

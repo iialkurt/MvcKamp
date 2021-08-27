@@ -7,22 +7,16 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer.Abstract
 {
-   public interface IRepository<T>
+    public interface IRepository<T>
     {
-        //Listeleme
         List<T> List();
 
-        //Kayıt Ekleme
-        void Insert(T p);
+        void insert(T p);
 
-        //Kayıt Güncelleme
-        void Update(T p);
+        void delete(T p);
 
-        //Kayıt Silme
-        void Delete(T p);
+        void update(T p);
 
-        //Filtreleme
-        List<T> List(Expression<Func<T, bool>> filter);
-
+         List<T> List(Expression<Func<T, bool>> filter);
     }
 }
