@@ -17,7 +17,7 @@ namespace BusinessLayer.Concrete
             return repo.List();
         }
 
-        public void CategoryAdBL(Category p)
+        public void CategoryAddBL(Category p)
         {
             repo.Insert(p);
         }
