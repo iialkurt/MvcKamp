@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddCategory</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h3>Yeni Kategori Ekleme Sayfası</h3>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <form class="form-group" method="post">
+                        <input class="form-control" type="text" name="CategoryName" placeholder="Kategori Adı" />
+                        <br />
+                        <input class="form-control" type="text" name="CategoryDescription" placeholder="Kategori Açıklaması" />
+                        <br />
+                        <select class="form-select form-select-lg mb-3" aria-label="form-select-lg example" name="CategoryStatus">
+                            <option selected>Durum Seçiniz</option>
+                            <option value="True">Aktif</option>
+                            <option value="False">Pasif</option>
+                        </select>
+                        <br />
+
+                        <button class="btn btn-info">Ekle</button>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
