@@ -1,4 +1,6 @@
 ﻿
+@model EntityLayer.Congrete.Category
+
 @{
     Layout = null;
 }
@@ -19,7 +21,25 @@
             <div class="col-md-12">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <form class="form-group" method="post">
+                @using(Html.BeginForm("AddCategory","Category",FormMethod.Post))
+            {
+                    <div class="form-group">
+                        @Html.Label("Kategori Adı :")
+                        @Html.TextBoxFor(x => x.CategoryName)
+                        @Html.ValidationMessageFor(x=>x.CategoryName)
+                        <br /> <br />
+                        @Html.Label("Kategori Adı :")
+                        @Html.TextAreaFor(x => x.CategoryDescription)
+                        @Html.ValidationMessageFor(x=>x.CategoryDescription)
+                        <br /> <br />
+                        <button>Kaydet</button>
+
+
+                    </div>
+
+            }
+
+                    @*<form class="form-group" method="post">
                         <input class="form-control" type="text" name="CategoryName" placeholder="Kategori Adı" />
                         <br />
                         <input class="form-control" type="text" name="CategoryDescription" placeholder="Kategori Açıklaması" />
@@ -32,7 +52,8 @@
                         <br />
 
                         <button class="btn btn-info">Ekle</button>
-                    </form>
+                    </form>*@
+                    <a class="btn btn-info" href="/Category/GetCategoryList">Yeni Kategori</a>
                 </div>
                 <div class="col-md-4"></div>
             </div>

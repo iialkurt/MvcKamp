@@ -29,9 +29,34 @@ namespace BusinessLayer.Concrete
         {
 
             _categorydal.Insert(p);
+            
+
         }
 
+        public void CategoryAdd(Category category)
+        {
+            _categorydal.Insert(category);
+        }
 
+        public Category GetByID(int id)
+        {
+            return _categorydal.Get(x => x.CategoryId == id);
+        }
+
+        public void CategoryDelete(Category category)
+        {
+          _categorydal.Delete(category);
+        }
+
+        public void CategoryUpdate(Category category)
+        {
+            _categorydal.Update(category);
+        }
+
+       
+
+
+        //39. Dersteyim
 
         //GenericRepository<Category> repo = new GenericRepository<Category>();
 

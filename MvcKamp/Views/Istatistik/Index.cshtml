@@ -1,0 +1,132 @@
+﻿@using EntityLayer.Congrete
+@model List<Category>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="col-md-12">İstatistikler</h2>
+
+<div class="col-lg-3 col-6">
+    <!-- small card -->
+
+    <div class="small-box bg-info">
+        <div class="inner">
+
+            <h3>@ViewBag.d1</h3>
+
+
+            <p>Toplam Kategori Sayısı</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+
+        </a>
+    </div>
+</div>
+<!-- ./col -->
+<div class="col-lg-3 col-6">
+    <!-- small card -->
+    <div class="small-box bg-success">
+        <div class="inner">
+
+
+
+
+            <h3>@ViewBag.d2 </h3>
+
+
+
+
+            <p>Başlık tablosunda "yazılım" kategorisine ait başlık sayısı</p>
+
+
+
+
+        </div>
+        <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+        </div>
+
+    </div>
+</div>
+<!-- ./col -->
+<div class="col-lg-3 col-6">
+    <!-- small card -->
+    <div class="small-box bg-warning">
+        <div class="inner">
+            <h3>@ViewBag.d3</h3>
+
+            <p>İçinde a Harfi Geçen Yazarlar</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-user-plus"></i>
+        </div>
+
+    </div>
+</div>
+<!-- ./col -->
+<div class="col-lg-3 col-6">
+    <!-- small card -->
+    <div class="small-box bg-danger">
+        <div class="inner">
+            <h3>@ViewBag.d4</h3>
+
+            <p> En fazla başlığa sahip kategori adı</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-chart-pie"></i>
+        </div>
+
+    </div>
+</div>
+<!-- ./col -->
+<div class="col-lg-3 col-6">
+    <!-- small card -->
+    <div class="small-box bg-danger">
+        <div class="inner">
+            <h3>@ViewBag.d5</h3>
+
+            <p> Aktif Kategori Sayısı</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-chart-pie"></i>
+        </div>
+
+    </div>
+</div>
+<!-- ./col -->
+<div class="col-lg-3 col-6">
+    <!-- small card -->
+    <div class="small-box bg-danger">
+        <div class="inner">
+            <h3>@ViewBag.d6</h3>
+
+            <p> Pasif Kategori Sayısı</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-chart-pie"></i>
+        </div>
+
+    </div>
+</div>
+
+<!-- ./col -->
+<div class="col-lg-3 col-6">
+    <!-- small card -->
+    <div class="small-box bg-danger">
+        <div class="inner">
+            <h3>@ViewBag.d7</h3>
+
+            <p> Aktif - Pasif Kategori Farkı</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-chart-pie"></i>
+        </div>
+
+    </div>
+</div>

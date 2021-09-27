@@ -1,0 +1,36 @@
+﻿
+@using EntityLayer.Congrete
+@model List<Writer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Kategori Listesi</h2>
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <td>Yazar Adı</td>
+        <td>Yazar Soyadı</td>
+        <td>Yazar Email</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.WriterId</th>
+            <td>@item.WriterName</td>
+            <td>@item.WriterSurName</td>
+            <td>@item.WriterMail</td>
+            <td><button class="btn btn-primary">Güncelle</button></td>
+        </tr>
+
+    }
+
+</table>
+<a class="btn btn-info" href="/AdminWriter/AddWriter">Yeni Kategori</a>
+
+<button class="btn btn-warning">Yazar Listesi</button>

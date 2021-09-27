@@ -1,0 +1,35 @@
+﻿
+@model EntityLayer.Congrete.Category
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+    <div class="col-md-12">
+        <h3>Yeni Kategori Ekleme Sayfası</h3>
+        <br />
+
+        @using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.Label("Kategori Adı :")
+                @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.CategoryName)
+                <br /> <br />
+                @Html.Label("Kategori Açıklaması :")
+                @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.CategoryDescription)
+                <br /> <br />
+                <button class=" btn btn-info">Kaydet</button>
+
+
+            </div>
+
+        }
+
+
+        <a class="btn btn-info" href="/Category/GetCategoryList">Yeni Kategori</a>
+
+    </div>
+

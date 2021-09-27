@@ -1,0 +1,42 @@
+﻿
+@model EntityLayer.Congrete.Writer
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Yeni Yazar Ekleme Sayfası</h3>
+        <br />
+
+        @using (Html.BeginForm("AddWriter", "AdminWriter", FormMethod.Post))
+        {
+    <div class="form-group">
+        @Html.Label("Yazar Adı :")
+        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterName)
+
+        <br /> <br />
+        @Html.Label("Yazar SoyAdı :")
+        @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
+
+        <br /> <br />
+        @Html.Label("Yazar Email :")
+        @Html.TextAreaFor(x => x.WriterImage, new { @class = "form-control" })
+
+        <br /> <br />
+        <button class=" btn btn-primary from-control">Kaydet</button>
+
+
+    </div>
+
+        }
+
+
+        <a class="btn btn-info" href="/Category/GetCategoryList">Yeni Kategori</a>
+
+    </div>
+</div>
+
